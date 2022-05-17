@@ -1,7 +1,7 @@
 // import { SafeAreaView, ScrollView, StyleSheet } from "react-native-web";
 import { StyleSheet, Text, SafeAreaView, Dimensions, ScrollView, Pressable, View, Image } from 'react-native';
 import Icon from "react-native-vector-icons/FontAwesome";
-import { FontAwesome5, AntDesign } from '@expo/vector-icons';
+import { FontAwesome5, AntDesign, Ionicons, MaterialCommunityIcons} from '@expo/vector-icons';
 
 // import FontAwesomeIcon from "react-native-fontawesome";
 
@@ -22,7 +22,149 @@ export default function ChooseRestaurantCheckout () {
                 <Text style={styles.headingTwo}> Drinks </Text>
             </View>
 
-            {/* //TODO: Turn this into a re-usable component */}
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
+
+            <View style={styles.victuals}>
+                <View style={styles.victualImage}>
+                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
+                </View>
+                <View style={styles.victualInfo}>
+                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
+                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
+                    <View style={styles.victualAmountAction}> 
+                        <Text style={styles.victualPrice}> Frw 5000 </Text>
+                        <View style={styles.victualAmountActionIcon}>
+                            <Icon name="minus" style={styles.icon}/>
+                                <Text style={styles.victualAmount}> 2 </Text>
+                            <Icon name="plus" style={styles.icon}/>
+                        </View>
+                    </View>
+                </View>
+            </View>
 
             <View style={styles.victuals}>
                 <View style={styles.victualImage}>
@@ -55,12 +197,17 @@ export default function ChooseRestaurantCheckout () {
             <Pressable style={styles.proceeder}>
                 <Text style={styles.proceederButton}>Proceed To Checkout</Text>
             </Pressable>
-            
-            <View style={styles.navigationBar}>
-
-            </View>
 
           </ScrollView>
+
+          <View style={styles.navigationBar}>
+                <AntDesign name="home" style={styles.navIcon} />
+                <Ionicons name="notifications-outline"style={styles.navIcon} />
+                <MaterialCommunityIcons name="food" style={styles.navIcon}/>
+                <Ionicons name="ios-timer-outline" style={styles.navIcon}/>
+                <AntDesign name="shoppingcart" style={[styles.navIcon, styles.navIconActive]}/>
+          </View>
+
       </SafeAreaView>  
     );
 }
@@ -68,7 +215,7 @@ export default function ChooseRestaurantCheckout () {
 const styles = StyleSheet.create({
 
     container:{
-        marginTop: 30,
+        
     },
     headings:{
         marginRight: 34,
@@ -91,9 +238,11 @@ const styles = StyleSheet.create({
       marginTop: 14,
     },
     scrollview: {
-        backgroundColor: "white",
+        marginTop: 30,
+        backgroundColor: "rgb(250, 250, 250)",
         height: (height * 90 / 100),
         width,
+
         padding: 10,
     },
     headingOne: {
@@ -218,6 +367,7 @@ const styles = StyleSheet.create({
         borderRadius: 9,
         elevation: 3,
         backgroundColor: AppOrangeColor,
+        marginBottom: 30,
     },
 
     proceederButton: {
@@ -227,4 +377,28 @@ const styles = StyleSheet.create({
         letterSpacing: 0.25,
         color: 'white',
     },
+    navigationBar:{
+        flexDirection: 'row',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignItems: 'center',
+        paddingVertical: 12,
+        paddingHorizontal: 32,
+        borderRadius: 100,
+        elevation: 3,
+        backgroundColor: 'white',
+        marginLeft: 0,
+        marginRight: 0,
+        paddingTop: 26,
+        paddingBottom: 26,
+    },
+    navIcon: {
+        flex:2,
+        fontSize: 25,
+        marginRight: 4,
+    },
+    navIconActive:{
+        color: AppIntensiveOrangeColor,
+    }
 })
