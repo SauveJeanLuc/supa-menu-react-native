@@ -12,6 +12,34 @@ var AppOrangeColor = "#F7941D";
 var AppIntensiveOrangeColor = "rgb(255, 128, 0)";
 
 export default function ChooseRestaurantCheckout () {
+    const victuals = [
+        {
+          id: 1,
+          ingredients: "Kalfir Lime Vodka, Lemongrass, Ginger, Citrus",
+          name: "Tom Yummy - 12.5",
+          price: "5000",
+          imageUrl: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+          amount: 2,
+        },
+        {
+          id: 2,
+          ingredients: "Kalfir Lime Vodka, Lemongrass, Ginger, Citrus",
+          name: "Tom Yummy",
+          price: "5000",
+          imageUrl: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+          amount: 2,
+        },
+        {
+          id: 3,
+          ingredients: "Kalfir Lime Vodka, Lemongrass, Ginger, Citrus",
+          name: "Tom Yummy",
+          price: "5000",
+          imageUrl: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+          amount: 2,
+        },
+
+    ];
+
     return(
       <SafeAreaView style={styles.container}>
           <ScrollView style={styles.scrollview}>
@@ -22,23 +50,27 @@ export default function ChooseRestaurantCheckout () {
                 <Text style={styles.headingTwo}> Drinks </Text>
             </View>
 
-            <View style={styles.victuals}>
-                <View style={styles.victualImage}>
-                    <Image style={styles.tinyLogo} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
-                </View>
-                <View style={styles.victualInfo}>
-                    <Text style={styles.victualIngredients}> Kalfir Lime Vodka, Lemongrass, Ginger, Citrus </Text>
-                    <Text style={styles.victualName}> Tom Yummy - 12.5 </Text>
-                    <View style={styles.victualAmountAction}> 
-                        <Text style={styles.victualPrice}> Frw 5000 </Text>
-                        <View style={styles.victualAmountActionIcon}>
-                            <Icon name="minus" style={styles.icon}/>
-                                <Text style={styles.victualAmount}> 2 </Text>
-                            <Icon name="plus" style={styles.icon}/>
+            {victuals.map((victual) => {
+                return (
+                    <View style={styles.victuals}>
+                        <View style={styles.victualImage}>
+                            <Image style={styles.tinyLogo} source={{ uri: `${victual.imageUrl}`,}} />
+                        </View>
+                        <View style={styles.victualInfo}>
+                            <Text style={styles.victualIngredients}>{victual.ingredients}</Text>
+                            <Text style={styles.victualName}>{victual.name}</Text>
+                            <View style={styles.victualAmountAction}> 
+                                <Text style={styles.victualPrice}>Frw {victual.price}</Text>
+                                <View style={styles.victualAmountActionIcon}>
+                                    <Icon name="minus" style={styles.icon}/>
+                                        <Text style={styles.victualAmount}> {victual.amount} </Text>
+                                    <Icon name="plus" style={styles.icon}/>
+                                </View>
+                            </View>
                         </View>
                     </View>
-                </View>
-            </View>
+                );
+            })}
 
             <View style={styles.moreNavigator}>
                 <Text style={styles.moreNavigatorText}>more drinks</Text>
