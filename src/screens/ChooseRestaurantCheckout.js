@@ -1,5 +1,4 @@
-// import { SafeAreaView, ScrollView, StyleSheet } from "react-native-web";
-import { StyleSheet, Text, SafeAreaView, Dimensions, ScrollView, Pressable, View, Image } from 'react-native';
+// import { SafeAreaView, ScrollView, StyleSheet } from "react-native-web"
 import Icon from "react-native-vector-icons/FontAwesome";
 import { FontAwesome5, AntDesign, Ionicons, MaterialCommunityIcons} from '@expo/vector-icons';
 
