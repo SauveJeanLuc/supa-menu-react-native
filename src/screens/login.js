@@ -8,12 +8,13 @@ import {
   TextInput,
   TouchableOpacityBase,
   ScrollView,
+  Image,
 } from "react-native";
 
 function Login() {
   return (
-    <ScrollView>
-      <SafeAreaView style={styles.container}>
+    <View style={styles.header}>
+      <View style={styles.container}>
         <Text style={styles.loginHeader}>Welcome...</Text>
         <Text style={styles.loginmsg}>Sign in to continue</Text>
         <View style={styles.form}>
@@ -30,18 +31,54 @@ function Login() {
             <Text style={styles.loginText}>Sign In</Text>
           </View>
         </TouchableOpacity>
-      </SafeAreaView>
-    </ScrollView>
+
+        <View style={styles.or}>
+          <View style={styles.orLineLef} />
+          <Text style={styles.orText}>OR</Text>
+          <View style={styles.orLineRight} />
+        </View>
+
+        <View>
+          <TouchableOpacity>
+            <View style={styles.loginGoogle}>
+              <Text style={styles.loginWithText}>Login with google</Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity>
+            <View style={styles.loginFb}>
+              <Text style={styles.loginWithText}>Login with facebook</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.forget}>
+          <Text style={styles.forgetPassword}>Forgot Password?</Text>
+          <View style={styles.Account}>
+            <Text style={styles.noAccount}>Don't have an account?</Text>
+            <Text style={styles.register}>Register</Text>
+          </View>
+        </View>
+      </View>
+    </View>
   );
 }
 
 export default Login;
 
 const styles = StyleSheet.create({
+  header: {
+    flex: 1,
+    backgroundColor: "#F7941D",
+  },
+
   container: {
-    marginTop: 100,
-    backgroundColor: "#ffffff",
-    margin: 10,
+    marginTop: "20%",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#fff",
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
   loginHeader: {
     textAlign: "center",
@@ -66,24 +103,106 @@ const styles = StyleSheet.create({
     borderColor: "#e1e1e1",
     height: 45,
     borderRadius: 3,
-    margin: 10,
+    margin: 3,
     padding: 10,
-    width: 350,
+    marginLeft: 17,
+    marginRight: 40,
     fontSize: 13,
+    color: "black",
   },
   LoginButton: {
-    backgroundColor: "gold",
-    width: 350,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 30,
+    backgroundColor: "#F7941D",
+    // width: 360,
+    marginLeft: 20,
+    marginRight: 40,
+    marginTop: 10,
     height: 50,
     borderRadius: 3,
   },
   loginText: {
     textAlign: "center",
     padding: 12,
-    fontSize: 18,
+    fontSize: 15,
     color: "#ffffff",
+  },
+
+  or: {
+    flexDirection: "row",
+    marginTop: 20,
+    marginLeft: 30,
+    marginRight: 40,
+  },
+
+  orLineLef: {
+    backgroundColor: "grey",
+    height: 1,
+    flex: 1,
+    alignSelf: "center",
+  },
+  orText: {
+    alignSelf: "center",
+    paddingHorizontal: 10,
+    fontSize: 13,
+  },
+
+  orLineRight: {
+    backgroundColor: "grey",
+    height: 1,
+    flex: 1,
+    alignSelf: "center",
+  },
+
+  loginGoogle: {
+    borderWidth: 1.9,
+    borderColor: "#e1e1e1",
+    backgroundColor: "#ffffff",
+    marginLeft: 20,
+    marginRight: 40,
+    marginTop: 10,
+    height: 50,
+    borderRadius: 3,
+  },
+  loginFb: {
+    borderWidth: 1.9,
+    borderColor: "#e1e1e1",
+    backgroundColor: "#ffffff",
+    // width: 360,
+    marginLeft: 20,
+    marginRight: 40,
+    marginTop: 10,
+    height: 50,
+    borderRadius: 3,
+  },
+  loginWithText: {
+    textAlign: "center",
+    padding: 12,
+    fontSize: 15,
+    color: "grey",
+    fontWeight: "bold",
+  },
+
+  forget: {
+    marginTop: 10,
+  },
+  forgetPassword: {
+    textAlign: "center",
+    color: "#F7941D",
+    fontSize: 13,
+    // marginTop: 5,
+    fontWeight: "bold",
+  },
+  Account: {
+    flexDirection: "row",
+    marginTop: 5,
+  },
+  noAccount: {
+    marginLeft: 100,
+    color: "grey",
+    fontSize: 13,
+    padding: 2,
+  },
+  register: {
+    color: "#F7941D",
+    fontWeight: "bold",
   },
 });

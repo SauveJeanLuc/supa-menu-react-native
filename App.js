@@ -1,26 +1,24 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import Home from "./src/screens/Home";
-import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./src/screens/login";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+const App = () => {
   return (
-    <View style={styles.container}>
-      {/* <Text>Open up App.js to start working on your app!</Text>
-      <ChooseRestaurantCheckout></ChooseRestaurantCheckout>
-      <StatusBar style="auto" />
-      <Home/> */}
-      <Login />
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "rgb(250, 250, 250)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default App;
