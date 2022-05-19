@@ -11,7 +11,7 @@ import {
   Image,
 } from "react-native";
 
-function Login() {
+function Login({ navigation }) {
   return (
     <View style={styles.header}>
       <View style={styles.container}>
@@ -26,7 +26,7 @@ function Login() {
           />
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Search")}>
           <View style={styles.LoginButton}>
             <Text style={styles.loginText}>Sign In</Text>
           </View>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
   },
 
   loginGoogle: {
-    borderWidth: 1.9,
+    borderWidth: 2,
     borderColor: "#e1e1e1",
     backgroundColor: "#ffffff",
     marginLeft: 20,
