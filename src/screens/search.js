@@ -11,8 +11,9 @@ import {
   ScrollView,
   Image,
 } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 
-function Search() {
+function Search({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.search}>
@@ -20,6 +21,7 @@ function Search() {
         <TextInput
           placeholder="Search for your favorite restaurant"
           style={styles.textInput}
+          onKeyPress={()=>navigation.navigate("SuccPay")}
         />
       </View>
 
