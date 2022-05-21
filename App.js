@@ -8,45 +8,57 @@ import SuccPay from "./src/screens/SuccPay";
 import RateUs from "./src/screens/RateUs";
 import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
 import Landing from "./src/screens/Landing";
+import React from "react";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
-  return (
+  const [loading, setlaoding] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setlaoding(false);
+    }, 5000);
+  }, []);
+
+  return loading ? (
+    <Landing />
+  ) : (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Landing">
-          <Stack.Screen
-            name="Landing"
-            component={Landing}
-            options={{ headerShown: false }}
-          />
-
+        <Stack.Navigator initialRouteName="Login">
           {/* <Stack.Screen
+          name="RegisterScreen"
+          component={RegisterScreen}
+          options={{ headerShown: false }}
+        /> */}
+
+          <Stack.Screen
             name="Login"
             component={Login}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
-            name="Search"
-            component={Search}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="SuccPay"
-            component={SuccPay}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="RateUs"
-            component={RateUs}
-            options={{ headerShown: false }}
-          /> */}
+          {/*
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SuccPay"
+          component={SuccPay}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="RateUs"
+          component={RateUs}
+          options={{ headerShown: false }}
+        /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
-    // <SuccPay/>
-    // <RateUs/>
   );
+
+  // <RateUs/>
 };
 
 export default App;
