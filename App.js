@@ -7,14 +7,21 @@ import Search from "./src/screens/search";
 import SuccPay from "./src/screens/SuccPay";
 import RateUs from "./src/screens/RateUs";
 import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
+import Landing from "./src/screens/Landing";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Landing">
           <Stack.Screen
+            name="Landing"
+            component={Landing}
+            options={{ headerShown: false }}
+          />
+
+          {/* <Stack.Screen
             name="Login"
             component={Login}
             options={{ headerShown: false }}
@@ -33,8 +40,7 @@ const App = () => {
             name="RateUs"
             component={RateUs}
             options={{ headerShown: false }}
-          />
-
+          /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
