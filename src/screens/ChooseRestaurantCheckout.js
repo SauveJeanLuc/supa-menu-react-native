@@ -1,7 +1,8 @@
 // import { SafeAreaView, ScrollView, StyleSheet } from "react-native-web"
+import { StyleSheet, Text, SafeAreaView, Dimensions, ScrollView, Pressable, View, Image } from 'react-native';
 import Icon from "react-native-vector-icons/FontAwesome";
 import { FontAwesome5, AntDesign, Ionicons, MaterialCommunityIcons} from '@expo/vector-icons';
-
+import Victual from '../components/Victual'
 // import FontAwesomeIcon from "react-native-fontawesome";
 
 let height = Dimensions.get("window").height;
@@ -51,23 +52,7 @@ export default function ChooseRestaurantCheckout () {
 
             {victuals.map((victual) => {
                 return (
-                    <View style={styles.victuals}>
-                        <View style={styles.victualImage}>
-                            <Image style={styles.tinyLogo} source={{ uri: `${victual.imageUrl}`,}} />
-                        </View>
-                        <View style={styles.victualInfo}>
-                            <Text style={styles.victualIngredients}>{victual.ingredients}</Text>
-                            <Text style={styles.victualName}>{victual.name}</Text>
-                            <View style={styles.victualAmountAction}> 
-                                <Text style={styles.victualPrice}>Frw {victual.price}</Text>
-                                <View style={styles.victualAmountActionIcon}>
-                                    <Icon name="minus" style={styles.icon}/>
-                                        <Text style={styles.victualAmount}> {victual.amount} </Text>
-                                    <Icon name="plus" style={styles.icon}/>
-                                </View>
-                            </View>
-                        </View>
-                    </View>
+                    <Victual victual={victual} key={victual.id} />
                 );
             })}
 

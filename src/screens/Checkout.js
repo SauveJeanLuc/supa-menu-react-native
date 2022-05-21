@@ -2,6 +2,7 @@
 import { StyleSheet, Text, SafeAreaView, Dimensions, ScrollView, Pressable, View, Image } from 'react-native';
 import Icon from "react-native-vector-icons/FontAwesome";
 import { FontAwesome5, AntDesign, Ionicons, MaterialCommunityIcons, MaterialIcons} from '@expo/vector-icons';
+import PaymentOption from '../components/PaymentOption';
 
 // import FontAwesomeIcon from "react-native-fontawesome";
 
@@ -39,18 +40,8 @@ export default function Checkout () {
             </View>
 
             <View style={styles.paymentBox}>
-                <View style={styles.payment}>
-                    <Image style={styles.paymentImage} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
-                    <Text style={styles.paymentText}>MTN Mobile Money</Text>
-                </View>
-                <View style={styles.payment}>
-                    <Image style={styles.paymentImage} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
-                    <Text style={styles.paymentText}>MTN Mobile Money</Text>
-                </View>
-                <View style={styles.payment}>
-                    <Image style={styles.paymentImage} source={{ uri: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',}} />
-                    <Text style={styles.paymentText}>MTN Mobile Money</Text>
-                </View>
+                <PaymentOption name={'MTN Mobile mone'} uri={'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'}/>
+                <PaymentOption name={'MTN Mobile mone'} uri={'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80'}/>
             </View>
               
 
