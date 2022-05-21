@@ -2,8 +2,6 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import basketImage from '../assets/pay.png';
 import { AntDesign } from '@expo/vector-icons';
-import SuperMenu from '../assets/SuperMenu.svg'
-import Svg, {Use} from 'react-native-svg';
 
 const appOrange = '#ee8b07';
 
@@ -24,7 +22,7 @@ export default function SuccPay({navigation}) {
       </View>
 
       <View style={line}>
-         <Text style={link}>Check Details </Text>
+         <Text style={link}>Check Details</Text>
          <AntDesign name="arrowright" size={24} color="#ee8b07" style={styles.linkArrow}/>
        </View>
        
@@ -62,8 +60,8 @@ const styles = StyleSheet.create({
   },
 
   imge:{
-
-    marginTop:60,
+    top:90,
+    marginBottom:60,
     height:300,
     width:300,
   },
@@ -72,20 +70,26 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     color:'#ee8b07',
     margin:5,
-    fontSize:16
+    fontSize:20,
+    textAlign:'center'
   },
   paragraph:{
     color:'white',
-    fontSize:16
+    fontSize:20,
+    textAlign:'center',
+    // backgroundColor:'black'
   },
   words:{
+    top:70,
     flex: 1,
     alignItems:'center',
-    justifyContent:'space-around',
     textAlign:'center',
-    width:400,
-    marginLeft:65,
-    padding:30
+    width:450,
+    height:5,
+    marginLeft:15,
+    // marginTop:37,
+    padding:30,
+    // backgroundColor:'blue'
   },
   link:{
     flex: 1,
@@ -102,9 +106,11 @@ const styles = StyleSheet.create({
   },
   line:{
     flex:1,
+    top:3,
     flexDirection:'row',
     justifyContent:'space-around',
     alignItems:'center',
+    // backgroundColor:'red'
   },
   buttonContainer: {
     flex: 1,
@@ -113,8 +119,8 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },  
   button: {
-    backgroundColor: '#FFA451',
-    width: 350,
+    backgroundColor: '#ee8b07',
+    width: 450,
     display: 'flex',
     padding: 20,
     borderRadius: 10,
@@ -122,7 +128,8 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   buttonLabel: {
-    color: 'white'
+    color: 'white',
+    fontSize:20
   },
   footerLogo: {
     flex: 1,
