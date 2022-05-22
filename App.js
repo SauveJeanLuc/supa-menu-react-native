@@ -9,7 +9,6 @@ import RateUs from "./src/screens/RateUs";
 import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
 import RegisterScreen from "./src/screens/RegisterScreen";
 import Landing from "./src/screens/Landing";
-import SignIn from "./src/screens/signIn";
 import React from "react";
 
 const Stack = createNativeStackNavigator();
