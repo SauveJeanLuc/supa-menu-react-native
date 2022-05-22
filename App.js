@@ -9,6 +9,7 @@ import RateUs from "./src/screens/RateUs";
 import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
 import Landing from "./src/screens/Landing";
 import React from "react";
+import Signup from "./src/screens/RegisterScreen";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -27,11 +28,13 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
 
-        <Stack.Screen
+         
+
+        {/* <Stack.Screen
             name="Landing"
             component={Landing}
             options={{ headerShown: false }}
-          />
+          /> */}
 
         <Stack.Screen
             name="Signup"
