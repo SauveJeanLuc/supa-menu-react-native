@@ -27,34 +27,40 @@ const App = () => {
   ) : (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="RegisterScreen">
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen
+            name="Landing"
+            component={Landing}
+            options={{ headerShown: false }}
+          />
+
+          <Stack.Screen
+            name="Signup"
+            component={Signup}
+            options={{ headerShown: false }}
+          />
+
           <Stack.Screen
             name="RegisterScreen"
             component={RegisterScreen}
             options={{ headerShown: false }}
           />
 
-          {/* <Stack.Screen
-            name="Login"
-            component={Login}
+          <Stack.Screen
+            name="Search"
+            component={Search}
             options={{ headerShown: false }}
-          /> */}
-          {/*
-        <Stack.Screen
-          name="Search"
-          component={Search}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="SuccPay"
-          component={SuccPay}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="RateUs"
-          component={RateUs}
-          options={{ headerShown: false }}
-        /> */}
+          />
+          <Stack.Screen
+            name="SuccPay"
+            component={SuccPay}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="RateUs"
+            component={RateUs}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

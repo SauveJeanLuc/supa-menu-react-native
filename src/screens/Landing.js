@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
+import React from 'react';
+import { StyleSheet,View,Alert} from 'react-native';
 
 import SVGImg from "../assets/supe.svg";
 import Svg, { Path } from "react-native-svg";
@@ -28,13 +28,16 @@ export default function Landing() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#ee8b07",
-    height: "100%",
-  },
-  logo: {
-    marginLeft: 100,
-    marginTop: 250,
-  },
-});
+
+
+const styles= StyleSheet.create({
+    container:{
+        backgroundColor: '#ee8b07',
+        height: '100%'
+    },
+    menu:{
+     
+        marginTop: '70%',
+        marginLeft:'20%'
+    }
+})
