@@ -6,7 +6,6 @@ import {theme}  from "../core/theme"
 const Header=(props)=>{
     return <Text style={styles.header} {...props}/>
 }
-
 const styles=StyleSheet.create({
     header:{
     marginLeft:60,
@@ -15,5 +14,4 @@ const styles=StyleSheet.create({
     paddingVertical: 12,
     }
 })
-
 export default Header
