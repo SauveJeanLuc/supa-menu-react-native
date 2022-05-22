@@ -14,7 +14,8 @@ import {
 } from "@expo/vector-icons";
 import ButtonComponent from "../components/ButtonComponent";
 import FormCard from "../components/FormCard";
-import colors from "../config/colors";
+import colors from ".../config/colors";
+
 export default function RegisterScreen({ navigation }) {
   const [name, setName] = React.useState("Your Name");
   const [number, setNumber] = React.useState("Phone Number");
