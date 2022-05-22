@@ -7,7 +7,7 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
-import { 
+import {
   Octicons,
   AntDesign,
   MaterialCommunityIcons,

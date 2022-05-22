@@ -6,12 +6,23 @@ import Login from "./src/screens/login";
 import Search from "./src/screens/search";
 import SuccPay from "./src/screens/SuccPay";
 import RateUs from "./src/screens/RateUs";
-import Signup from "./src/screens/RegisterScreen";
+import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
 import Landing from "./src/screens/Landing";
+import React from "react";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
-  return (
+  const [loading, setlaoding] = React.useState(true);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setlaoding(false);
+    }, 5000);
+  }, []);
+
+  return loading ? (
+    <Landing />
+  ) : (
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
@@ -33,26 +44,28 @@ const App = () => {
             component={Login}
             options={{ headerShown: false }}
           />
-          <Stack.Screen
-            name="Search"
-            component={Search}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="SuccPay"
-            component={SuccPay}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="RateUs"
-            component={RateUs}
-            options={{ headerShown: false }}
-          />
-
+          {/*
+        <Stack.Screen
+          name="Search"
+          component={Search}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="SuccPay"
+          component={SuccPay}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="RateUs"
+          component={RateUs}
+          options={{ headerShown: false }}
+        /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
   );
+
+  // <RateUs/>
 };
 
 export default App;
