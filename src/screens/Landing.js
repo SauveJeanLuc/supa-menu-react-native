@@ -1,10 +1,18 @@
 import React from 'react';
-import { StyleSheet,View} from 'react-native';
+import { StyleSheet,View,Alert} from 'react-native';
 
 import SVGImg from '../assets/supe.svg';
 
 // import { View } from 'react-native-web';
 export default function Landing() {
+
+    
+        useEffect(() => {
+          setTimeout(() => {
+            Alert.alert('I am appearing...', 'After 5 seconds!');
+          }, 5000);
+        }, []);
+
     return (
     <View style={styles.container}>
 
@@ -12,6 +20,7 @@ export default function Landing() {
     </View>
     );
 }
+
 
 
 const styles= StyleSheet.create({

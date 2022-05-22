@@ -6,6 +6,8 @@ import Login from "./src/screens/login";
 import Search from "./src/screens/search";
 import SuccPay from "./src/screens/SuccPay";
 import RateUs from "./src/screens/RateUs";
+import Signup from "./src/screens/RegisterScreen";
+import Landing from "./src/screens/Landing";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -13,6 +15,19 @@ const App = () => {
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Login">
+
+        <Stack.Screen
+            name="Landing"
+            component={Landing}
+            options={{ headerShown: false }}
+          />
+
+        <Stack.Screen
+            name="Signup"
+            component={Signup}
+            options={{ headerShown: false }}
+          />
+
           <Stack.Screen
             name="Login"
             component={Login}
