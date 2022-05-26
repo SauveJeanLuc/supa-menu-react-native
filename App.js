@@ -10,6 +10,7 @@ import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
 import RegisterScreen from "./src/screens/RegisterScreen";
 import Landing from "./src/screens/Landing";
 import React from "react";
+import Signup from "./src/screens/RegisterScreen";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -26,22 +27,15 @@ const App = () => {
   ) : (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen
-            name="Landing"
-            component={Landing}
-            options={{ headerShown: false }}
-          />
-
+        <Stack.Navigator initialRouteName="Signup">
           <Stack.Screen
             name="Signup"
             component={Signup}
             options={{ headerShown: false }}
           />
-
           <Stack.Screen
-            name="RegisterScreen"
-            component={RegisterScreen}
+            name="Login"
+            component={Login}
             options={{ headerShown: false }}
           />
 

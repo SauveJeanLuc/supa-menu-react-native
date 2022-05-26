@@ -1,10 +1,11 @@
 import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import React from "react";
-const ButtonComponent = ({ text, background }) => {
+const ButtonComponent = ({ text, background, navigation }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
         style={[styles.button, { backgroundColor: background }]}
+        onPress={() => navigation.navigate("Login")}
       >
         <Text
           style={{
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   button: {
-    paddingHorizontal: 140,
+    paddingHorizontal: 120,
     width: "90%",
     marginLeft: "auto",
     marginRight: "auto",

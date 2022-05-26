@@ -14,7 +14,7 @@ import {
 } from "@expo/vector-icons";
 import ButtonComponent from "../components/ButtonComponent";
 import FormCard from "../components/FormCard";
-import colors from ".../config/colors";
+import colors from "../config/colors";
 
 export default function RegisterScreen({ navigation }) {
   const [name, setName] = React.useState("Your Name");
@@ -59,7 +59,11 @@ export default function RegisterScreen({ navigation }) {
           />
         </View>
         <View style={{ marginVertical: 10 }}>
-          <ButtonComponent text="Proceed" background="#F6941C" />
+          <ButtonComponent
+            text="Proceed"
+            background="#F6941C"
+            navigation={navigation}
+          />
         </View>
         <View
           style={{
@@ -104,12 +108,7 @@ export default function RegisterScreen({ navigation }) {
         >
           <Text style={{ color: colors.secondary }}>
             Do you Have an account?{" "}
-            <Text
-              onPress={() => navigation.navigate("Login")}
-              style={{ color: colors.primary }}
-            >
-              Login
-            </Text>
+            <Text style={{ color: colors.primary }}>Login</Text>
           </Text>
         </View>
       </FormCard>
