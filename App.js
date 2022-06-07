@@ -7,8 +7,10 @@ import Search from "./src/screens/search";
 import SuccPay from "./src/screens/SuccPay";
 import RateUs from "./src/screens/RateUs";
 import ChooseRestaurantCheckout from "./src/screens/ChooseRestaurantCheckout";
+import RegisterScreen from "./src/screens/RegisterScreen";
 import Landing from "./src/screens/Landing";
 import React from "react";
+import Signup from "./src/screens/RegisterScreen";
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -25,41 +27,33 @@ const App = () => {
   ) : (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
-
-        <Stack.Screen
-            name="Landing"
-            component={Landing}
-            options={{ headerShown: false }}
-          />
-
-        <Stack.Screen
+        <Stack.Navigator initialRouteName="Signup">
+          <Stack.Screen
             name="Signup"
             component={Signup}
             options={{ headerShown: false }}
           />
-
           <Stack.Screen
             name="Login"
             component={Login}
             options={{ headerShown: false }}
           />
-          {/*
-        <Stack.Screen
-          name="Search"
-          component={Search}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="SuccPay"
-          component={SuccPay}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="RateUs"
-          component={RateUs}
-          options={{ headerShown: false }}
-        /> */}
+
+          <Stack.Screen
+            name="Search"
+            component={Search}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="SuccPay"
+            component={SuccPay}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="RateUs"
+            component={RateUs}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

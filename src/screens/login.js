@@ -143,7 +143,7 @@ export default Login;
 
 const styles = StyleSheet.create({
   logo: {
-    marginTop: 15,
+    marginTop: 20,
     marginLeft: 100,
   },
   header: {
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   loginHeader: {
     textAlign: "center",
     fontSize: 19,
-    marginTop: 5,
+    marginTop: 20,
     color: "black",
     fontWeight: "bold",
   },
@@ -170,6 +170,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 13,
     color: "grey",
+    marginTop: 10,    
   },
   form: {
     marginLeft: 5,
